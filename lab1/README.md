@@ -18,7 +18,7 @@ This is a demo project using FastAPI and Uvicorn. It implements 10 different rou
 
 2. Start the server:
    ```
-   uvicorn main:app --reload
+   uvicorn main:app --port 8000 --reload
    ```
 
 3. Visit:
