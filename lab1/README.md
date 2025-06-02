@@ -13,7 +13,7 @@ This is a demo project using FastAPI and Uvicorn. It implements 10 different rou
 
 1. Install requirements:
    ```
-   pip install fastapi uvicorn
+   pip3 install fastapi uvicorn
    ```
 
 2. Start the server:
