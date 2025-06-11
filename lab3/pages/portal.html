@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Page</title>
+    <style>
+      nav {
+        overflow: hidden;
+      }
+      nav a {
+        float: left;
+        display: block;
+        color: blue;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/things">Things</a>
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <div>
+      <h1>Enter</h1>
+      <form action="/portal" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <button type="submit">Enter</button>
+      </form>
+      <form id="hForm" action="/header-check">
+        <button type="submit">Test Headers</button>
+      </form>
+
+      <script>
+        const form = document.getElementById("hForm");
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          const headers = new Headers();
+          headers.append("X-Header", "my-header");
+
+          fetch(form.action, {
+            method: "POST",
+            headers: headers,
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>
