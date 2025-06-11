@@ -5,3 +5,7 @@
 # Python cache dirs
 **/__pycache__/
 __pycache__/
+
+# Node module dirs
+**/node_modules/
+node_modules/
