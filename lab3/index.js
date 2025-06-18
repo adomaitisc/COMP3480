@@ -43,8 +43,8 @@ app.get("/search", (req, res) => {
     `<h1>Search Results for "${query}"</h1> <a href="/">Back to Home</a>`
   );
 });
-app.get("/user", (req, res) => {
-  const userId = req.query.id || "unknown";
+app.get("/user/:id", (req, res) => {
+  const userId = req.params.id || "unknown";
   res.send(
     `<h1>User Profile</h1> <p>User ID: ${userId}</p> <a href="/">Back to Home</a>`
   );
