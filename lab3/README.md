@@ -22,11 +22,13 @@ This is a demo project using Express.js that implements various types of routes 
 ## Setup and Running
 
 1. Install dependencies:
+
    ```
    npm install
    ```
 
 2. Start the server:
+
    ```
    node index.js
    ```
@@ -36,6 +38,7 @@ This is a demo project using Express.js that implements various types of routes 
 ## Available Routes
 
 ### HTML Pages
+
 - `/` - Home page
 - `/about` - About page
 - `/things` - Things page
@@ -43,6 +46,7 @@ This is a demo project using Express.js that implements various types of routes 
 - `/portal` - Portal page
 
 ### Query Parameter Routes
+
 - `/greet?name=value` - Displays a greeting with the provided name
 - `/post?page=number` - Shows a page number with navigation
 - `/search?q=query` - Displays search results
@@ -50,20 +54,23 @@ This is a demo project using Express.js that implements various types of routes 
 - `/gps?lat=value&lon=value` - Displays GPS coordinates
 
 ### Special Routes
+
 - `POST /header-check` - Checks for 'x-header' header parameter
 - `POST /portal` - Processes form data and redirects to greeting
 
 ## Testing the API
 
-You can test the API endpoints using tools like cURL or Postman:
+You can test the API endpoints using tools like cURL or HTTPie/Postman/Insomnia:
 
 ### Example Header Check:
+
 ```bash
 curl -X POST http://localhost:8080/header-check \
   -H "x-header: my-header"
 ```
 
 ### Example Form Submission:
+
 ```bash
 curl -X POST http://localhost:8080/portal \
   -H "Content-Type: application/json" \
