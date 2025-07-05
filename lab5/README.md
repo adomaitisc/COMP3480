@@ -20,6 +20,17 @@ mysql -u root < createguitar.sql
 mysql -u root -p my_guitar_shop
 ```
 
+## Accessing the database via SQL IDE (DBeaver or TablePlus)
+
+1. Open TablePlus and create a new MySQL connection
+2. Set up the following connection settings:
+   - Host: `localhost` or `127.0.0.1`
+   - User: `root`
+   - Password: ``
+   - Database: `my_guitar_shop`
+   - Port: `3306`
+   - SSL mode: `Disabled`
+
 ## Single Queries (3)
 
 ```sql
