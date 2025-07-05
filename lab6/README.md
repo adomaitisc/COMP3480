@@ -4,7 +4,7 @@ The goal of this lab is to containerize the last lab's [Lab 5](../lab5) MySQL da
 
 ## Important
 
-If there in an instance of MySQL running on your machine, you need to stop it before running the Docker Compose command, otherwise you will be accessing the wrong database.
+If there is an instance of MySQL running on your machine, you need to stop it before running the Docker Compose command otherwise you might be accessing the wrong database. Or you could change the port mappings in the Docker Compose file.
 
 ## Starting the container
 
@@ -23,7 +23,7 @@ docker compose down
 ```
 
 ## Importing the database
-
+The `-h` flag allow us to set a host, which could even be remote. The `-P` specifies the port and the `-p` means you want to use password.
 ```sh
 # First, we check if the database is accessible
 mysql -h 127.0.0.1 -P 3306 -u root -p
