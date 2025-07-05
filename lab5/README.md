@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lab 5: MySQL Locally
 
 In this lab, we'll install MySQL locally and execute a series of queries agaisnt the provided `my_guitar_shop` database.
@@ -128,3 +129,30 @@ SELECT DATE_FORMAT(order_date, '%Y-%m') AS order_month,
 FROM orders
 GROUP BY order_month;
 ```
+=======
+## Queries
+
+Products:
+
+```sql
+-- Select all products along with their Categories (category_id -> category.category_id -> category.category_name)
+-- Ordered alphabetically, based on Product name
+mysql> SELECT categories.category_name,
+       product_code, product_name, description, list_price, discount_percent,
+       (list_price - list_price * discount_percent / 100) as final_price
+       FROM products INNER JOIN categories
+         ON products.category_id = categories.category_id
+       ORDER BY product_name ASC; 
+
+-- Same query, filtering by price range
+-- Unfortunately, we can't use the final_price in the WHERE clause, so we must calculate again.
+mysql> SELECT categories.category_name,
+       product_code, product_name, description, list_price, discount_percent,
+       (list_price - list_price * discount_percent / 100) as final_price
+       FROM products INNER JOIN categories
+         ON products.category_id = categories.category_id
+       WHERE (list_price - list_price * discount_percent / 100) BETWEEN 49.99 AND 149.99
+       ORDER BY product_name ASC;
+
+
+>>>>>>> 7d83fe4 (lab5)
