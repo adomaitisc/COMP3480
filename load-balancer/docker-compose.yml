@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  app1:
+    image: load-balancer:latest
+    networks:
+      - "nginx-network"
+    ports:
+      - "9600:9600"
+    environment:
+      APP_NAME: "App 1"
+  app2:
+    image: load-balancer:latest
+    networks:
+      - "nginx-network"
+    ports:
+      - "9601:9600"
+    environment:
+      APP_NAME: "App 2"
+  nginx:
+    image: nginx:latest
+    networks:
+      - "nginx-network"
+    ports:
+      - "8080:80"
+    depends_on:
+      - app1
+      - app2
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+networks:
+  nginx-network:
+    driver: bridge
