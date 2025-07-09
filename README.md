@@ -13,4 +13,4 @@ Welcome to the experiments of my Cloud Computing class, each folder has what is 
 
 ## Other
 
-- [Load Balancer with Nginx](https://github.com/adomaitisc/COMP3480/tree/main/load-balancer)
+- [Load Balancer with Nginx: Docker Compose to orchestrate many FastAPI apps with a single Nginx](https://github.com/adomaitisc/COMP3480/tree/main/load-balancer)
