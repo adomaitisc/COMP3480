@@ -1,23 +1,69 @@
 # Lab 7: Containerized MySQL with Python Driver
 
-The goal of this lab is to use the containerized MySQL database from the last lab and connect to it using a custom Python driver.
+The goal of this lab is to use the containerized MySQL database from the last lab and connect to it using a custom Python driver with an interactive query interface.
 
-## Important
+## Project Overview
 
-If there is an instance of MySQL running on your machine, you need to stop it before running the Docker Compose command otherwise you might be accessing the wrong database. Or you could change the port mappings in the Docker Compose file.
+This lab implements a complete MySQL database application with:
 
-## Starting the container
+- **Containerized MySQL Database**: Using Docker Compose
+- **Python Query Interface**: Interactive menu-driven application
+- **Comprehensive Test Suite**: Unit tests for all functionality
+- **13 Pre-built Queries**: Organized by type (Single, Inner Join, Group-By)
 
-Please, refer to the Lab 6 README.md file for instructions on how to start the container.
+## Project Structure
 
-## Accessing the database with the Python Driver
-
-The Python driver is a loop that will run until the connection is closed, it has the queries implemented in the lab 5 assignment.
-
-```sh
-python3 main.py
+```
+lab7/
+├── main.py              # Main application with interactive menu
+├── queries.py           # All SQL queries organized by type
+├── test.py              # Comprehensive unit test suite
+├── requirements.txt     # Python dependencies
+└── README.md            # This file
 ```
 
-## Built in Queries and Functions
+## Prerequisites
 
-Please, refer to the Lab 5 README.md file for detailed intstructions and information on each query.
+- Docker and Docker Compose installed
+- Python 3.7+ with pip
+- No conflicting MySQL instance running on port 3306
+- [Access to Lab 6 Instructions](../lab6/README.md)
+
+## Quick Start
+
+### 1. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the Tests
+
+```bash
+python test.py
+```
+
+### 3. Run the Python Driver
+
+```bash
+python main.py
+```
+
+## Interactive Menu System
+
+The application provides a hierarchical menu:
+
+1. **Single Queries** (3 queries)
+2. **Inner Join Queries** (5 queries)
+3. **Group-By Queries** (5 queries)
+4. **All Queries** (13 total queries)
+
+## Queries
+
+The queries are organized in the `queries.py` file, it is organized by type of query:
+
+- Single Queries
+- Inner Join Queries
+- Group-By Queries
+
+You can read more about the queries in the [Lab 5 README.md file.](../lab5/README.md)
