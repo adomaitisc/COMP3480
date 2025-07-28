@@ -27,7 +27,7 @@ lab7/
 - Docker and Docker Compose installed
 - Python 3.7+ with pip
 - No conflicting MySQL instance running on port 3306
-- [Access to Lab 6 Instructions](../lab6/README.md)
+- [Lab 6 Instructions on Deploying the MySQL instance](../lab6/README.md)
 
 ## Quick Start
 
