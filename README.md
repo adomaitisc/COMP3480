@@ -9,7 +9,8 @@ Welcome to the experiments of my Cloud Computing class, each folder has what is 
 - [Lab 3: Simple Express + NodeJS](https://github.com/adomaitisc/COMP3480/tree/main/lab3)
 - [Lab 4: Dockerifle + Lab 1 FastAPI Server with Python 3.9](https://github.com/adomaitisc/COMP3480/tree/main/lab4)
 - [Lab 5: Running MySQL Locally](https://github.com/adomaitisc/COMP3480/tree/main/lab5)
-- [Lab 6: Running MySQL on Docker Containers with Docker Compose](https://github.com/adomaitisc/COMP3480/tree/main/lab5)
+- [Lab 6: Running MySQL on Docker Containers with Docker Compose](https://github.com/adomaitisc/COMP3480/tree/main/lab6)
+- [Lab 7: Executing Python Scripts on top of MySQL Container](https://github.com/adomaitisc/COMP3480/tree/main/lab7)
 
 ## Other
 
